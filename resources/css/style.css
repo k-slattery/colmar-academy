@@ -1,0 +1,693 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #EAEBED;
+    color: #343434;
+}
+
+a {
+    text-decoration: none;
+    color: #424949;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 700;
+    padding-bottom: 32px;
+    line-height: 3.5rem;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.75rem;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+
+/*Header section*/
+.header-desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #bd081c;
+    height: 4rem;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 100;
+}
+
+
+/* Mobile */
+.header-mobile {
+    /* see media rule at end of this section */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #bd081c;
+    height: 4rem;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 100;
+}
+
+
+/* mobile display */
+.header-mobile .mobile {
+    display: none;
+    /* see media rule at end of this section */
+    width: 25%;
+    text-align: center;
+    z-index: 100;
+}
+
+
+/* mobile display */
+.header-mobile .mobile img {
+    padding: 5px;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: "Playfair Display", serif;
+    font-size: 1.35rem;
+    letter-spacing: 2px;
+}
+
+#colmar {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+#academy {
+  font-weight: 700;
+    color: #000000;
+}
+
+.logo img {
+    margin-left: 1.5rem;
+    height: 3rem;
+    width: auto;
+}
+
+nav {
+    margin: 0 24px;
+}
+
+nav span {
+    margin-left: 1rem;
+}
+
+
+/* Mobile */
+nav .mobile {
+    display: none;
+}
+
+nav a {
+    font-family: "Montserrat", sans-serif;
+    font-kerning: 1.2rem;
+    font-size: .8rem;
+    letter-spacing: .125rem;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 4px;
+    border-radius: 2px;
+}
+
+nav a:hover {
+    color: #000000;
+    border-bottom: 2px solid black;
+    transition: color 225ms;
+}
+
+
+/* Mobile */
+@media only screen and (max-width: 480px) {
+    .header-desktop {
+      display: none;
+    }
+
+    .header-mobile {
+        display: flex;
+    }
+
+    #colmar, #academy {
+        display: none;
+    }
+
+    .header-mobile .mobile {
+        display: block;
+    }
+}
+
+
+/* Intro section */
+.intro {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-height: auto;
+    background-color: #ffffff;
+    top: 64px;
+}
+
+.intro-img {
+    display: block;
+    position: relative;
+    max-width: 55%;
+    overflow: hidden;
+    padding: 2rem 2.5rem 2rem 1.5rem;
+}
+
+.intro img {
+    width: 100%;
+    height: auto;
+}
+
+.intro-content {
+    width: 30%;
+    height: auto;
+    margin: auto 0;
+    line-height: 1.1;
+}
+
+.intro-content .button {
+    positon: relative;
+    display: block;
+    background-color: #bd081c;
+    color: #ffffff;
+    max-width: 250px;
+    font-size: 1rem;
+    letter-spacing: .125rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    padding: 1.25rem;
+    margin: 3rem 0;
+    text-align: center;
+    border-radius: 2.5px;
+}
+
+
+/* only show hover/transition on desktop display */
+@media only screen and (min-width: 481px) {
+    .intro-content .button:hover {
+        background-color: #ce2e45;
+        color: #ffffff;
+        box-shadow: 0px 5px 15px #cccccc;
+        transition: background-color 200ms ease;
+    }
+}
+
+
+/* Mobile */
+@media only screen and (max-width: 480px) {
+    .intro {
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
+    .intro-img {
+        min-width: 100%;
+        height: auto;
+        padding: 0;
+    }
+    .intro-content {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: auto;
+        padding: 2rem 0;
+        text-align: center;
+    }
+    .intro-content h3 {
+        padding: 0 1rem 2.5rem 1rem;
+    }
+    .intro-content .button {
+        width: 50%;
+        margin: auto;
+
+    }
+}
+
+
+/* Info section */
+.info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-height: auto;
+    margin-top: 67px;
+}
+
+.info-main {
+    display: block;
+    position: relative;
+    min-width: 55%;
+    overflow: hidden;
+    padding: 0 1.5rem 0 1.5rem;
+    /*border-right: 1px solid lightgrey;*/
+}
+
+.info-main img {
+    width: 100%;
+    height: auto;
+}
+
+.info-main span {
+    display: block;
+    position: relative;
+    padding-top: 2rem;
+    margin: 0 auto;
+    padding-top: 1.5rem;
+    line-height: 1.5;
+}
+
+#attrib {
+    font-weight: 400;
+    font-style: italic;
+    font-size: .85rem;
+}
+
+.info-cards {
+    padding: 32px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    min-width: 423px;
+    height: auto;
+}
+
+
+/* Desktop Image */
+.info-cards .img-desktop {
+    display: flex;
+    width: 35%;
+    margin: 0;
+    float: left;
+    padding: 1rem;
+}
+
+/* Mobile */
+.info-cards .img-mobile {
+    display: none;
+    /* see media rules at end of section */
+    position: relative;
+    max-width: 93%;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.info-content p {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 1rem 0;
+    line-height: 1.5rem;
+}
+
+.info-content h3 {
+  margin-top: 1.5rem;
+  margin-bottom: -1.5rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+#display-control {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    position: relative;
+    display: block;
+    visibility: hidden;
+    color: #bd081c;
+    margin-top: 2.5rem;
+    font-size: 1rem;
+    letter-spacing: .125rem;
+}
+
+.info-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    width: auto;
+    border-bottom: 5px solid #ededed;
+}
+
+.info-content .text {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100%;
+    margin: auto 0;
+}
+
+/* only show hover/transition on desktop display */
+@media only screen and (min-width: 481px) {
+
+    .info-content:hover #display-control {
+        visibility: visible;
+        transition: 250ms ease;
+    }
+
+    .info-content:hover {
+        border-bottom: 5px solid #bd081c;
+        transition: border-bottom 250ms ease, background-color 250ms ease;
+        background-color: #ffffff;
+
+    }
+}
+
+
+/* Mobile */
+@media only screen and (max-width: 480px) {
+    .info-cards {
+        padding: 1rem 0;
+        flex-direction: column;
+        /*border-bottom: 1px solid lightgray;*/
+    }
+
+    .info-cards .text {
+        width: 92%;
+        height: auto;
+        margin: 16px 32px;
+        border-bottom: 1px dotted lightgrey;
+    }
+
+    .info-main, .info-cards .img-desktop {
+        display: none;
+    }
+
+    .info-cards .img-mobile {
+        display: block;
+        max-width: 92%;
+        padding: 0 1rem;
+    }
+
+    .info-content {
+        display: block;
+        overflow: hidden;
+        margin: auto 0;
+    }
+
+    .info-content h3 {
+      margin-top: 0;
+      margin-bottom: 0.1rem;
+    }
+
+    .info-content p {
+      margin: .5rem 0;
+    }
+
+    #display-control {
+      visibility: visible;
+      font-size: 1rem;
+      margin: 1rem 0;
+    }
+}
+
+
+/* Curriculum section */
+.curriculum {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    background-color: #cccccc;
+    padding-bottom: 2rem;
+}
+
+.curr-title {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: auto 0;
+    text-align: center;
+    padding: 2rem 0 1rem 0;
+}
+
+.curr-cards {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+}
+
+.course {
+    display: inline-block;
+    width: 25%;
+    height: auto;
+    overflow: hidden;
+    margin: 1rem;
+    background-color: #ffffff;
+}
+
+.course img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.course-text {
+    display: inline-block;
+    min-height: 150px;
+    margin: 1rem 1.5rem;
+}
+
+.course-text h3 {
+    margin: .75rem 0 .75rem 0;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.course-text h5 {
+    margin: 1rem 0;
+    font-family: "Playfair Display", serif;
+    color: #9c9c9c;
+    font-style: italic;
+}
+
+.course-text p {
+    line-height: 1.25;
+    font-size: .75rem;
+}
+
+
+/* only show hover/transition on desktop display */
+@media only screen and (min-width: 481px) {
+    .course:hover {
+        background-color: #343434;
+        color: #ffffff;
+        transition: background-color 250ms ease, color 250ms ease;
+    }
+}
+
+
+/* Mobile */
+@media only screen and (max-width: 480px) {
+    .curriculum {
+        align-items: center;
+        background-color: #cccccc;
+        padding-bottom: 2rem;
+        width: 100%;
+    }
+    .curr-cards {
+        flex-direction: column;
+    }
+    .course img, .course-text h5, .course-text p {
+        display: none;
+    }
+    .course {
+        display: block;
+        width: 92%;
+        margin: 0.15rem 1rem;
+        background-color: #343434;
+    }
+    .course-text {
+        color: white;
+        min-height: auto;
+    }
+}
+
+
+/* Thesis exhibits section */
+.thesis {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    max-height: auto;
+    border-bottom: 1px solid lightgray;
+    background-color: #ededed;
+}
+
+.thesis-title {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: auto 0;
+    text-align: center;
+    padding: 2rem 0 2rem 0;
+}
+
+.thesis-vid {
+    display: block;
+    position: relative;
+    width: 55%;
+    overflow: hidden;
+    padding: 0 1rem 1.5rem 1.5rem;
+}
+
+.thesis-vid video {
+    border: 1px solid lightgray;
+}
+
+.thesis-vid h3 {
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.thesis-vid span {
+    display: block;
+    position: relative;
+    padding-top: 2rem;
+    margin: 0 auto;
+    padding-top: 1.5rem;
+    line-height: 1.5;
+}
+
+.thesis-vid span p {
+    margin-top: 1rem;
+}
+
+.thesis-cards {
+    position: relative;
+    width: 40%;
+    height: auto;
+}
+
+.thesis-feature {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+    border-bottom: 5px solid #ededed;
+}
+
+.thesis-feature h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+.thesis-feature img {
+    display: inline-block;
+    width: 35%;
+    height: auto;
+    margin: 1rem;
+    float: left;
+}
+
+.thesis-text {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    line-height: 1.5;
+    margin: auto 0;
+}
+
+.thesis-feature p {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/* only show hover/transition on desktop display */
+@media only screen and (min-width: 481px) {
+    .thesis-feature:hover {
+      border-bottom: 5px solid #bd081c;
+      transition: border-bottom 250ms ease, background-color 250ms ease;
+      background-color: #ffffff;
+    }
+}
+
+
+/* Mobile */
+@media only screen and (max-width: 480px) {
+    .thesis {
+        border: none;
+    }
+    .thesis-vid span {
+        display: none;
+    }
+    .thesis-cards {
+        display: none;
+    }
+    .thesis-vid {
+        width: 100%;
+        padding: 0;
+    }
+    .thesis-vid video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+/* Footer section */
+footer {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    color: #ffffff;
+    background-color: #000000;
+    padding: 1rem 1.5rem 2rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 0.75rem;
+}
+
+footer .links a {
+    padding: 0 0.5rem;
+    color: white;
+}
+
+
+/* Mobile footer */
+@media only screen and (max-width: 480px) {
+    footer {
+        background-color: black;
+        color: white;
+        margin-top: 1.5rem;
+        padding: 1rem 1rem;
+    }
+    footer .links {
+        display: none;
+    }
+}
